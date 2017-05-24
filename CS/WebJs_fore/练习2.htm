@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var sec = 4;
+            //启动计时器
+            var intervalId = setInterval(function () {
+                var btnObject = document.getElementById('btn');
+                if (sec > 0) {
+                    btnObject.value = '请等待(' + sec + ')秒';
+                    sec--;
+
+                } else {
+                    btnObject.value = '确定';
+                    btnObject.disabled = false;
+                    //停止计时器
+                    clearInterval(intervalId);
+
+                }
+            }, 1000);
+        };
+    </script>
+
+
+</head>
+<body>
+<input disabled="disabled" type="button" name="name" value="请等待（5）秒" id="btn" />
+</body>
+</html>

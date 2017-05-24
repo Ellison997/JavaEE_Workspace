@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    //在js中没有类的概念，继承是通过对象和对象实现的额
+    function Person(name, age, email) {
+        this.user_name = name;
+        this.user_age = age;
+        this.user_email = email;
+    }
+    Person.prototype.sayHi = function () {
+        alert(this.user_name+'    '+this.user_age+'    '+this.user_email);
+
+    }
+
+    function Student(sid) {
+        this.student_sid = sid;
+    }
+    var p1 = new Person('张三', 13, '198587558@162.com');
+    Student.prototype = p1;
+
+
+    var s1 = new Student('11001');
+    s1.user_name = '李四';
+    s1.user_age = 24;
+    s1.sayHi();
+
+    s1.sayHi = function () {
+        alert('哈哈')
+    };
+    s1.sayHi();
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="day02-03-hibernate-onetomany-single"
+  id="myeclipse.1489534665026"
+  context-root="/Hibernate"
+  j2ee-spec="6.0"
+  archive="day02-03-hibernate-onetomany-single.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,24 @@
+1、什么是struts2
+	1>运行在web层。负责处理请求的e
+	2>struts2已经帮我们封装了很多web中常用的功能（拦截器）
+	3>struts2与struts1没什么关系，struts2是基于webWork框架的
+	
+2、struts框架搭建
+	1>导包
+		struts2/apps/struts-blank.war/Web-INF/lib
+	2>书写Action
+	
+	3>书写主配置文件 src/struts2.xml
+	
+	4>在web.xml中配置过滤器
+		--StrutsPrepareAndExecuteFilter
+		
+3、struts2架构
+
+4、配置详解
+	1>struts2核心配置
+		<struts>
+		
+		</struts>
+
+5、Action 详解

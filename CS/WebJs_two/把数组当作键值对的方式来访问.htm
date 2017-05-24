@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var dict = new Array();
+        dict['jk'] = '将神';
+        dict['tcl'] = '田春乐';
+        dict['suj'] = '孙叙杰';
+
+        dict[0] = 'haha';           //普通的数组也可以看做是一个特殊的键值对
+        dict['1'] = 'ghfuas';
+        dict[2] = '嘿嘿';
+
+
+        alert(dict['jk']+'      '+dict.length);
+
+        //遍历键值对数组
+
+        for (var key in dict) {
+            alert('键'+key+'    '+ dict[key]);
+        }
+
+
+
+        //-----键值对的一种简写方式：对象字面量---------
+        var dictt = { 'jk': '将神', 'tcll': '田春乐', 'haha': '哈哈' };
+        for (var kryy in dictt) {
+        alert(dictt[kryy]);
+    }
+
+    dictt.ltl = '田硕';
+    alert(dictt.ltl);
+
+    
+    
+    
+    </script>
+</head>
+<body>
+
+</body>
+</html>

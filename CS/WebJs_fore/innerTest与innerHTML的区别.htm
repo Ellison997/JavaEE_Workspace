@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+    #div1
+    {
+       width:200px;
+       height:300px;
+       border:1px solid blue;
+       }
+    
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                //document.getElementById('div1').innerText='<a href="http://www.baidu.com">你百度</a>';
+
+                document.getElementById('div1').innerHTML = '<a href="http://www.baidu.com">百度</a>';
+            };
+        };
+    
+    
+    </script>
+</head>
+<body>
+    <input type="button" name="name" value="按钮" id="btn" />
+    <div id="div1">
+    默认内容
+    </div>
+</body>
+</html>

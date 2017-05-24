@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style type="text/css">
+#div1
+{
+    background-color:Blue;
+    width:100px;
+    height:100px;
+    position:absolute;
+    left:200px;
+    top:200px;
+    margin:50px;
+    }
+</style>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById('btn').onclick = function () {
+            var clickString = document.getElementById('div1').onclick.toString();
+            alert(clickString);
+
+        };
+        //为层注册一个单击时间
+        document.getElementById('div1').onclick = function (evt) {
+            //--------------兼容代码-----------------
+            //当我们要编写兼容不同浏览器代码的时候，最好不要做浏览器判断，而要做“能力检测”
+            var e = window.event || evt;
+
+            //在FireFox等标准的浏览器下，获取事件对象不能通过windows.event方式，只能在时间处理程序中增加一个参数，而这个参数就是事件对象
+            if (e.altKey) {
+                alert('鼠标点击的时候按下了Alt键');
+            } else if (e.ctrlKey) {
+                alert('鼠标点击的时候按下了Ctrl键');
+
+            } else if (e.shiftKey) {
+                alert('鼠标点击的时候按下了Shift键');
+
+
+            } else {
+                alert('普通点击！');
+            }
+
+
+        };
+
+        //获取屏幕坐标
+        document.getElementById('div1').onclick = function (evt) {
+
+        //兼容代码 兼容火狐和IE  
+            var e = window.event || evt;
+            //获取当前鼠标点击的坐标
+            //相对于当前页面左上角的偏移坐标
+            var x = e.clientX;
+            var y = e.clientY;
+
+            //相对于屏幕左上角的偏移坐标
+            var z = e.screenX;
+            var c = e.screenY;
+
+            //相对于元素自己的偏移坐标
+      //      var x = e.offsetX;
+        //    var y = e.offsetY;
+
+            alert(x + ',' + y)
+            alert(z + ',' + c)
+
+
+        };
+
+
+
+    };
+   
+
+</script>
+</head>
+<body>
+    <input type="button" name="name" value="按钮" id="btn" />
+    <br />
+<div id="div1">
+
+
+</div>
+</body>
+</html>

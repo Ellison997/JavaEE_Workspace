@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    //当一个函数注册给不同对象的时候，在调用时，函数中使用的this表示的是不同的对象
+
+    function f1() {
+        alert(this);            //直接在页面上定义的函数其实默认的就是注册给了window对象
+
+    }
+
+    //在一个函数内部，this表示的是那个对象，取决于当前函数是哪个对象的函数
+    window.f1();
+
+    function Person() {
+        this.toString = function () {
+            //alert('Person类型');
+            return 'Person类型';
+
+        };
+    }
+    var p1 = new Person();
+    p1.toString();
+    p1.fn = f1;
+    p1.fn();
+
+
+
+    //-------------------------------
+    var name = "window中的name变量";
+    function Persons() {
+        this.name = 'Person中的name属性';
+        this.getName = function () {
+            alert(function () {
+                return this.name
+            }());
+        }
+}
+var p2 = new Persons();
+p2.getName();
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

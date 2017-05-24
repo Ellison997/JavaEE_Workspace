@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var textOne = document.getElementById('text').value;
+                var textTwo = document.getElementById('textss').value;
+
+                var tables = document.getElementById('tableOne');
+                var trs = tables.insertRow(-1);
+                var tds = trs.insertCell(-1);
+                tds.innerHTML = textOne;
+                trs.insertCell(-1).innerHTML = textTwo;
+                textOne = null;
+                textTwo = null;
+            };
+        };
+    
+    </script>
+</head>
+<body>
+<p>
+姓名：<input type="text" name="name" value=" " id="text" />
+</p>
+<p>
+评论：<input type="text" name="" value="" id="textss" />
+</p>
+<br />
+    <input type="button" name="name" value="提交" id="btn" />
+
+    <br />
+    <table border="1px" id="tableOne">
+    <tr><td>
+    姓名
+    </td>
+    
+    <td>评论</td></tr>
+    </table>
+
+</body>
+</html>

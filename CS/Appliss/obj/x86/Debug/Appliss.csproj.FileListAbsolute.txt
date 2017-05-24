@@ -1,0 +1,14 @@
+E:\My_workspace\CS\Appliss\bin\Debug\Appliss.exe
+E:\My_workspace\CS\Appliss\bin\Debug\Appliss.pdb
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.emailRegister.resources
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.Properties.Resources.resources
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.Register.resources
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.Text.resources
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.csproj.GenerateResource.Cache
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.exe
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.pdb
+E:\My_workspace\CS\Appliss\bin\Debug\Appliss.exe.manifest
+E:\My_workspace\CS\Appliss\bin\Debug\Appliss.application
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.exe.manifest
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.application
+E:\My_workspace\CS\Appliss\obj\x86\Debug\Appliss.csprojResolveAssemblyReference.cache

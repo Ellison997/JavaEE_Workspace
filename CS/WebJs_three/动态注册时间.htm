@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                alert(new Date().toLocaleTimeString());
+            };
+            document.getElementById('btn1').onclick = function () {
+
+                alert('按钮一，点我干嘛');
+            };
+            document.getElementById('btn2').onclick = function () {
+                alert('按钮二被电击了');
+            };
+
+            //改变按钮一的单击事件处理程序
+            document.getElementById('btn').onclick = fnClick;
+        //错误的，把函数fnClick的返回值赋值给onclick
+        //    document.getElementById('btn').onclick = fnClick;
+        };
+        function fnClick() {
+            alert('----------------------');
+        }
+    
+    </script>
+</head> 
+<body>
+<input type="button" name="name" value="按钮" id="btn" />
+    <input type="button" name="name" value="按钮1" id='btn1' />
+    <input type="button" name="name" value="按钮二" id='btn2' />
+</body>
+</html>

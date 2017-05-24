@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    window.onload = function () {
+        //为body注册一个oncopy事件
+        document.body.oncopy = function () {
+            setTimeout(function () {
+                var msg = clipboardData.getData('text');
+                //在用户拷贝的文字后价格尾巴
+                msg += '<p>本文本出自：http:net.itcast.cn</p>'
+                //将内容设置到剪切板中
+                clipboardData.setData('text', msg);
+            }, 100);
+        }
+    }
+
+</script>
+
+</head>
+
+<body>
+ASP.NET is a powerful platform for building Web applications, that provides a tremendous
+    amount of flexibility and power for building just about any kind of Web application.
+    Most people are familiar only with the high level frameworks like WebForms and WebServices
+    which sit at the very top level of the ASP.NET hierarchy. In this article I’ll describe
+    the lower level aspects of ASP.NET and explain how requests move from Web Server
+    to the ASP.NET runtime and then through the ASP.NET Http Pipeline to process requests.
+    To me understanding the innards of a platform always provides certain satisfaction
+    and level of comfort, as well as insight that helps to write better applications.
+    Knowing what tools are available and how they fit together as part of the whole
+    complex framework makes it easier to find the best solution to a problem and more
+    importantly helps in troubleshooting and debugging of problems when they occur.
+    The goal of this article is to look at ASP.NET from the System level and help understand
+    how requests flow into the ASP.NET processing pipeline. As such we’ll look at the
+    core engine and how Web requests end up there. Much of this information is not something
+    that you need to know in your daily work, but it’s good to understand how the ASP.NET
+    architecture routes request into your application code that usually sits at a much
+    higher level. Most people using ASP.NET are familiar with WebForms and WebServices.
+    These high level implementations are abstractions that make it easy to build Web
+    based application logic and ASP.NET is the driving engine that provides the underlying
+    interface to the Web Server and routing mechanics to provide the base for these
+    high level front end services typically used for your applications. WebForms and
+    WebServices are merely two very sophisticated implementations of HTTP Handlers built
+    on top of the core ASP.NET framework.
+</body>
+</html>
+
+
+
+

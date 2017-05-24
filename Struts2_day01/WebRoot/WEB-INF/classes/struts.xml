@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<!-- 文档头  struts-default 中查找 -->
+	<struts>
+	<!-- strut2常量配置  constant：常量-->
+	<!-- i18n:国际化。解决post提交乱码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 指定反问的action时的后缀名 -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<!-- 指定struts2是否已开发模式运行
+	1、提供热加载主配置。（不需要重启即可生效）
+	2、提供更多的错误信息输出，方便开发者进行调试
+	 -->	
+	 <constant name="struts.devMode" value="true"></constant>
+	
+	<!-- 
+	packge：将Action配置封装，就是可以在packge中配置很多Action
+	name属性:给包起个名称，起到标示作用，随便起 不能与其他包名重复
+	namespace属性：给action的访问路径中定义一个命名空间
+	extends属性：继承一个指定的包
+	abstract属性：包是否为抽象的；标示性属性，标示该包不能独立运行。专门被继承
+	-->
+	<package name="hello" namespace="/hello" extends="struts-default">
+	<action name="HelloAction" class="cn.itheima.a_hello.HelloAction" method="hello">
+	<result name="success">/index.jsp</result>
+	</action>
+	<!-- action元素：配置action类
+	1、name属性：决定了Action的访问资源名
+	2、class属性:Action的完整类名
+	3、method属性：指定调用的Action类中用哪个方法来处理请求
+	 -->
+	<!-- 
+	result元素：结果配置
+	name属性：指定结果处理的名称，与Action方法定义的返回值对应
+	type属性，指定调用哪一个result类来处理结果，默认使用转发
+	标签体：填写页面的相对路径
+	 -->
+	
+	</package>
+		
+	<!-- 引入其他struts配置文件 -->
+	<include file="cn/ithemima/b_dynamic/struts.xml"></include>
+	<include file="cn/ithemima/c_default/struts.xml"></include>
+	</struts>

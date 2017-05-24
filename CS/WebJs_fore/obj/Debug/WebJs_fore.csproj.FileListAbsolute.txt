@@ -1,0 +1,4 @@
+E:\My_workspace\CS\WebJs_fore\bin\WebJs_fore.dll
+E:\My_workspace\CS\WebJs_fore\bin\WebJs_fore.pdb
+E:\My_workspace\CS\WebJs_fore\obj\Debug\WebJs_fore.dll
+E:\My_workspace\CS\WebJs_fore\obj\Debug\WebJs_fore.pdb

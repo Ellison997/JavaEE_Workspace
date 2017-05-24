@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style type="text/css">
+#div1
+{
+    height:500px;
+    width:450px;
+    border:1px solid blue;
+    
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById('btn').onclick = function () {
+            var aLink = document.createElement('a');
+            aLink.href = 'http://www.baidu.com';
+            aLink.target = '_balank';
+            aLink.title = '百度一下，你就知道';
+            aLink.innerText = '百度';
+            document.getElementById('div1').appendChild(aLink);
+            //------------------------------------------------
+            //动态创建一个文本框
+            var texts = document.createElement('input');
+            texts.type = 'text';
+            //把动态创建的元素加到div内部
+            document.getElementById('div1').appendChild(texts);
+
+            //innerText属性与textContent 属性的作用：设置一对标签的开始和结束标签之间的内容
+
+            aLink.innerText = '百度'; //兼容IE的写法
+            aLink.textContent = '百度';   //兼容FF的写法
+
+            //由于innerText与textContent都是string类型的属性，所以即使某个浏览器确实有该属性，但是有可能是由于空字符串，导致if判断结果返回的还是false。所以要使用typeof来检测
+            if (typeof (aLink.innerText) == 'string') {
+                aLink.innerText = '百度';
+            } else if (typeof (aLink.textContent) == 'string') {
+                aLink.textContent = '百度';
+            }
+
+            //----------通用写法----------
+            //before 在.....之前
+            document.getElementById('div1').insertBefore(texts,document.getElementById('div1').firstChild);
+
+
+        };
+
+
+        //清空层中的所有元素
+        document.getElementById('btnClear').onclick = function () {
+            //获取层
+            var dvObject = document.getElementById('div1');
+            //获取层中的第一个子元素
+            //dvObject.firstChild;如果层中什么都没有那么firstChild就是undefined。如果有任何子元素，那么firstChild获取的就是第一个子元素对象
+
+            while (dvObject.firstChild) {
+
+                dvObject.removeChild(dvObject.firstChild);      //删除第一个子元素
+            }
+
+        };
+
+
+    };
+
+
+</script>
+
+</head>
+<body>
+    <input type="button" name="name" value="动态创建" id="btn" />
+    <div id="div1">
+
+    层中的默认元素
+    </div>
+    <input type="button" name="name" value="清空" id="btnClear" />
+</body>
+</html>

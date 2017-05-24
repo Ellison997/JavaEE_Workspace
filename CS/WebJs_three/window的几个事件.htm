@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            alert('页面加载完毕！');
+        };
+        //页面卸载之前执行（关闭之前）
+        window.onbeforeunload = function () {
+            //alert('页面即将卸载');
+            return '滚';
+        }
+
+        //页面卸载之后
+        window.onunload = function () {
+            alert('页面已经卸载了！');    
+        }
+    
+    
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

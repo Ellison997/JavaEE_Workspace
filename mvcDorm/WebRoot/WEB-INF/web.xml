@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>DoLogin</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.DoLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoRegister</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.DoRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoAddition</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.DoAddition</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoUpdate</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.DoUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DoDelete</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.DoDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_DoUpdate</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Teacher_DoUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_DoAdd</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Teacher_DoAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Teacher_DoDele</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Teacher_DoDele</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_DoLodge</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Student_DoLodge</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_DoUpdate</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Student_DoUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_DoAdd</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Student_DoAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Dorm_DoAdd</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Dorm_DoAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Student_Dodel</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Student_Dodel</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Record_DoAdd</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Record_DoAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Record_DoDel</servlet-name>
+    <servlet-class>com.sitcl.mvcoperation.controller.Record_DoDel</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>DoLogin</servlet-name>
+    <url-pattern>/DoLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoRegister</servlet-name>
+    <url-pattern>/DoRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoAddition</servlet-name>
+    <url-pattern>/DoAddition</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoUpdate</servlet-name>
+    <url-pattern>/DoUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoDelete</servlet-name>
+    <url-pattern>/DoDelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_DoUpdate</servlet-name>
+    <url-pattern>/Teacher_DoUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_DoAdd</servlet-name>
+    <url-pattern>/Teacher_DoAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Teacher_DoDele</servlet-name>
+    <url-pattern>/Teacher_DoDele</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_DoLodge</servlet-name>
+    <url-pattern>/Student_DoLodge</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_DoUpdate</servlet-name>
+    <url-pattern>/Student_DoUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_DoAdd</servlet-name>
+    <url-pattern>/Student_DoAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Dorm_DoAdd</servlet-name>
+    <url-pattern>/Dorm_DoAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Student_Dodel</servlet-name>
+    <url-pattern>/Student_Dodel</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Record_DoAdd</servlet-name>
+    <url-pattern>/Record_DoAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Record_DoDel</servlet-name>
+    <url-pattern>/Record_DoDel</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

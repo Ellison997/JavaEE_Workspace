@@ -1,0 +1,6 @@
+containmemt 包容
+context 环境上下文
+control 控件
+cookie 饼干 小甜点
+copy 拷贝
+create .creation 创建生成

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //在C#中创建函数
+        //如果不确定函数中将要传递的参数个数，那么可以使用类似于C#中可变参数的解决办法，在js中叫做arguments对象
+       //其实所有的方法都无需定义参数，定义参数的目的仅仅是为了使用方便
+        function add(){
+            var sum = 0;
+            //循环遍历累加每个参数的值
+            for (var i = 0; i < arguments.length; i++) {
+            sum+=arguments[i]
+        }
+        return sum;
+        }
+        var summ= add(1,2,3,45,67,23);
+        alert(summ);
+
+        var x = 1, y = 0, z = 0;
+        function add(n) {
+            n = n + 1;return n;
+
+        }
+        y = add(x);
+        function add(n) {
+            n = n + 3;return n;
+        }
+        z = add(x);
+
+        alert(y + '......' + z);    //执行结果是多少？ 为什么， 4.。。。。4
+        //因为函数有预解析功能，所以在执行之前会将所有的函数进行预解析。预解析的时候就会使用最后定义的函数覆盖前面定义的函数
+             
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+E:\My_workspace\CS\Manage\bin\Debug\Manage.exe
+E:\My_workspace\CS\Manage\bin\Debug\Manage.pdb
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.FormMain.resources
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.Properties.Resources.resources
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.csproj.GenerateResource.Cache
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.exe
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.pdb
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.sort_add.resources
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.csprojResolveAssemblyReference.cache
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.Browsejob.resources
+E:\My_workspace\CS\Manage\obj\x86\Debug\Manage.ModifyJob.resources

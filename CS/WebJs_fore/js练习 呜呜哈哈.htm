@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    window.onload = function () {
+        var tagElements = document.getElementsByTagName('input');
+        for (var i = 0; i < tagElements.length; i++) {
+            if (tagElements[i].type == 'button') {
+
+
+                tagElements[i].onclick = function () {
+
+                    for (var c = 0; c < tagElements.length; c++) {
+                        if (tagElements[c].type == 'button')
+                            tagElements[c].value = '哈哈';
+                    }
+                    this.value = '呜呜';
+
+                }
+
+            }
+        };
+
+    };
+
+
+</script>
+
+</head>
+<body>
+    <input type="button" name="name" value="哈哈" />
+    <input type="button" name="name" value="哈哈" />
+    <input type="button" name="name" value="哈哈" />
+
+    <input type="button" name="name" value="哈哈" />
+    <input type="button" name="name" value="哈哈" />
+    <input type="button" name="name" value="哈哈" />
+    <input />
+<input />
+    <input />
+</body>
+</html>

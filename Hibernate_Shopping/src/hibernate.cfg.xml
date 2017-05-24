@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+    <!-- dialect方言  指定hibernate使用哪个数据库-->
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="connection.url">jdbc:sqlserver://127.0.0.1:1433;DatabaseName=Shopping</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">system</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+		<property name="javax.persistence.validation.mode">none</property>
+		<!-- 
+			validate  默认值
+				根据持久化类和映射文件检查表的结构
+			update
+			hibernate容器在启动的时候，会根据持久化类和映射文件检查表的结构
+			如果不存在，则创建，如果存在，则更新
+			create
+			每次启动hibernate容器，不管表是否存在，都会创建
+			create-drop
+			当启动hibernate容器时创建表，当hibernate容器销毁时，删除表
+		-->
+		
+	<property name="current_session_context_class">thread</property>
+	<!-- Mapping files -->
+    <property name="show_sql">true</property><!-- 显示SQL语句 -->
+	<property name="format_sql">true</property>
+    <!-- resource 资源 -->
+    <mapping resource="com/examp/ShoppingOnline/model.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

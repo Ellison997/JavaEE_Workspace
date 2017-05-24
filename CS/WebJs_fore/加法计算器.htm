@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('on_sum').onclick = function () {
+                var one = document.getElementById('one').value;
+                var two = document.getElementById('two').value;
+                var sum = parseInt(one) + parseInt(two);
+                document.getElementById('sum').value = sum;
+
+            };
+        };
+    
+    </script>
+
+</head>
+<body>
+    <input type="text"  name="name" value=" " id="one" />
+    +
+    <input type="text" name="name" value=" " id="two" />
+    =
+    <input type="text" name="name" value=" " id="sum" />
+    &nbsp;&nbsp;
+    <input type="button" name="name" value="计算" id="on_sum" />
+
+
+</body>
+</html>

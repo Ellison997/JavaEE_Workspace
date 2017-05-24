@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //为body元素注册一个单击事件
+
+            document.getElementById('body1').onclick = function (evt) {
+                var e = window.event || evt;
+                //IE：e.srcElement;
+                //FF：e.target
+
+                //获取最初引发事件的对象
+                var srcTarget = e.srcElement || e.target;
+                alert(srcTarget.id);
+                //兼容写法，获取最初引发事件的对象
+
+            };
+
+            //为div1元素注册一个单击事件
+
+            document.getElementById('dv1').onclick = function (evt) {
+                var e = window.event || evt;
+                //IE：e.srcElement;
+                //FF：e.target
+
+                //获取最初引发事件的对象
+                var srcTarget = e.srcElement || e.target;
+                alert(srcTarget.id);
+                //兼容写法，获取最初引发事件的对象
+
+            };
+            //为p元素注册一个单击事件
+
+            document.getElementById('p1').onclick = function (evt) {
+                var e = window.event || evt;
+                //IE：e.srcElement;
+                //FF：e.target
+
+                //获取最初引发事件的对象
+                var srcTarget = e.srcElement || e.target;
+                alert(srcTarget.id);
+                //兼容写法，获取最初引发事件的对象
+
+            };
+            //为span元素注册一个单击事件
+
+            document.getElementById('sp1').onclick = function (evt) {
+                var e = window.event || evt;
+                //IE：e.srcElement;
+                //FF：e.target
+
+                //获取最初引发事件的对象
+                var srcTarget = e.srcElement || e.target;
+                alert(srcTarget.id);
+                //兼容写法，获取最初引发事件的对象
+
+            };
+        };
+    
+    </script>
+
+    <style type="text/css">
+    #dv1
+    {
+       width:200px;
+       height:200px;
+       background-color:Blue; 
+        
+        }
+        #p1
+        {
+            width:100px;
+            height:100px;
+            background-color:Red;
+            }
+    #sp1
+    {
+        background-color:Yellow;
+        color:Purple;
+        }
+    </style>
+
+</head>
+<body id="body1">
+<div id="dv1">
+<p id="p1">
+<span id="sp1">我叫田春乐，田春乐就是我</span>
+</p>
+
+</div>
+</body>
+</html>

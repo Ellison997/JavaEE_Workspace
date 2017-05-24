@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    var user_name = 'steve';
+    function fnTest() { 
+    
+    
+    }
+
+</script>
+
+</head>
+<body>
+<form id="form1" action="/" method="get">
+<input id="text1" type="text" name ="name" value=" " />
+<input id="btn1" type="button" name="name" value="button" />
+</form>
+<script type="text/javascript">
+    window.form1.text1.value = 'HelloWorld';
+    window.form1.btn1.value = '按钮';
+
+    //用这种
+    document.getElementById('text1').value = 'Hello Worldsss';
+    document.getElementById('btn1').value = '提交啊';
+</script>
+</body>
+</html>

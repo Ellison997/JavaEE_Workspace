@@ -1,0 +1,4 @@
+E:\My_workspace\CS\WebJs\bin\WebJs.dll
+E:\My_workspace\CS\WebJs\bin\WebJs.pdb
+E:\My_workspace\CS\WebJs\obj\Debug\WebJs.dll
+E:\My_workspace\CS\WebJs\obj\Debug\WebJs.pdb

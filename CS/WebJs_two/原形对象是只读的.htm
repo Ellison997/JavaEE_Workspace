@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    function Person(name) {
+        this.user_name = name;
+    }
+    Person.prototype.user_email = 'tyuseru@163.com';
+    Person.prototype.user_age = 23;
+    Person.prototype.friends = ['田硕', '叶春硕', '猛男', '海防'];
+    Person.prototype.sayHi = function () {
+        alert('大家好，我是：'+this.user_name+'邮箱是：'+this.user_email);
+    }
+
+    var p1 = new Person('田春乐');
+    p1.user_email = '12157227112qq.com';
+    p1.friends[0] = '赵六';
+    alert(p1.friends);
+    p1.sayHi();
+
+    var p2 = new Person('孙叙杰');
+    p2.friends = ['张三', '李四', '王五'];
+    alert(p2.friends);
+    p2.sayHi();
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

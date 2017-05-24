@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>我叫田春乐，田春乐就是我,我叫田春乐，田春乐就是我</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var direction = 'left';
+            var timeoutID, firstChar, others;
+
+            intervalID = setInterval(function () {
+                var titleText = document.title;
+                if (direction == 'left') {
+                    //默认启动计时器向左滚
+                    //截取出左边第一个字符
+
+                    firstChar = titleText.charAt(0);
+                //截取出除了第一个字符串以外的剩余的字符串
+                    others = titleText.substring(1);
+                    document.title = others + firstChar;
+                } else {
+                //向右滚动
+                    firstChar = titleText.charAt(titleText.length - 1);
+                    others = titleText.substring(0, titleText.length - 1);
+                    document.title = firstChar + others;
+                }
+            }, 500);
+
+
+            document.getElementById('btnLeft').onclick = function () {
+                direction = 'left';
+
+            };
+            document.getElementById('btnRight').onclick = function () {
+                direction = 'right';
+            };
+
+
+        }
+    
+    
+    
+    </script>
+
+</head>
+<body>
+    <input type="button" name="left" value="Left" id="btnLeft" />
+    <input type="button" name="right" value="Right" id="btnRight" />
+</body>
+</html>

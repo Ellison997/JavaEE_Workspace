@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var dict = {
+                '百度': 'http://www.baidu.com',
+                '新浪': 'http://www.sina.com.cn',
+                '谷歌': 'http://www.g.cn'
+            }
+            document.getElementById('btn').onclick=function(){
+            //动态创建表格
+            var tables = document.createElement('table');
+            tables.border = '1';
+
+            for (var key in dict) {
+                //每遍历一行数据就动态创建一行
+                var trs = tables.insertRow(-1);     //-1表示向最后追加一行
+                var tds = trs.insertCell(-1);
+                tds.innerHTML=key;
+                trs.insertCell(-1).innerHTML='<a href="' + dict[key] + '">' + key + '</a>';
+
+            }
+            //把表格添加到body中
+            document.body.appendChild(tables);
+
+            };
+        };
+    
+    </script>
+
+
+</head>
+<body>
+    <input type="button" name="name" value="创建表格" id="btn" />
+</body>
+</html>

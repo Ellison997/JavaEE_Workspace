@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app SYSTEM "web-app_2_3.dtd">
+<web-app>
+	<servlet>
+		<servlet-name>user_servlet</servlet-name>
+		<servlet-class>cn/itheima/xml/Book.xml</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>user_servlet</servlet-name>
+		<url-pattern>/userS</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>/index.html</welcome-file>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>	
+</web-app>

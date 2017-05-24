@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.examp.ShoppingOnline">
+	<!-- 建立User到表user的映射 -->
+	<class name="com.examp.ShoppingOnline.User" table="[user]" discriminator-value="C">
+		<!-- 建立User类中属性id到表user中字段id映射 -->
+		<id name="id">
+			<!-- increment用来指定id值自动增加的方式 -->
+			<generator class="identity" />
+		</id>
+		<!-- 建立User类中属性username到表user中字段username映射 -->
+		<property name="username" column="username" />
+		<!-- 如果name属性和column属性的值一样，可以将column属性省略  -->
+		<property name="password" />
+		<property name="realname" />
+		<property name="tel" />
+		<property name="address" />
+		<property name="zip" />
+		<property name="email" />
+		<one-to-one name="creditCardAccount" class="CreditCardAccount" cascade="all" />
+	</class>
+	
+	<!-- 建立Category到表category的映射 -->
+	<class name="com.examp.ShoppingOnline.Category" table="category" discriminator-value="C">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<property name="name" />
+		<!-- set标签表示Category类的属性products的类型为Set -->
+		<!-- 
+		table属性：用来指定建立category和product多对多关联关系的数据表；
+		key标签：表明category表通过category_product的外键category_id参照product表；
+		many-to-many标签：指定products的类型为Product。并且表明product表通过category_product表中的外键product_id参照category表。
+		 -->
+		<set name="products" table="category_product" cascade="save-update">
+			<key column="category_id" />
+			<many-to-many column="product_id" class="Product"/>
+		</set>
+	</class>
+	
+	<!-- 建立Product到表product的映射 -->
+	<class name="com.examp.ShoppingOnline.Product" table="product" discriminator-value="C">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<set name="categories" table="category_product" cascade="save-update">
+			<key column="product_id" />
+			<many-to-many column="category_id" class="Category" />
+		</set>
+		<property name="name" />
+		<property name="price" />
+		<property name="saleprice" />
+		<property name="descript" />
+		<property name="contents" />
+		<property name="saledate" />
+		<property name="salecount" />
+		<property name="image" />
+	</class>
+	
+	<!-- 建立Order到表orders的映射 -->
+	<class name="com.examp.ShoppingOnline.Orders" table="orders" discriminator-value="C">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<property name="orderno" />
+		<property name="userid" />
+		<property name="realname" />
+		<property name="address" />
+		<property name="zip" />
+		<property name="tel" />
+		<property name="payment" />
+		<property name="email" />
+		<property name="memo" />
+		<property name="price" />
+		<property name="time" />
+		<property name="tag" />
+	</class>
+	
+	<!-- 建立Shopcart到表shopcart的映射 -->
+	<class name="com.examp.ShoppingOnline.Shopcart" table="shopcart" discriminator-value="C">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<property name="orderid" />
+		<property name="productid" />
+		<property name="count" />
+		<property name="price" />
+	</class>
+	
+	<class name="com.examp.ShoppingOnline.CreditCardAccount" table="credit_card_account">
+		<id name="id">
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		<property name="cardnumber" column="card_number" />
+		<one-to-one name="user" class="User" constrained="true" />
+	</class>
+</hibernate-mapping>

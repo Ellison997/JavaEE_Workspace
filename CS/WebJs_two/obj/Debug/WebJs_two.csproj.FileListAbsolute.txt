@@ -1,0 +1,5 @@
+E:\My_workspace\CS\WebJs_two\bin\WebJs_two.dll
+E:\My_workspace\CS\WebJs_two\bin\WebJs_two.pdb
+E:\My_workspace\CS\WebJs_two\obj\Debug\WebJs_two.dll
+E:\My_workspace\CS\WebJs_two\obj\Debug\WebJs_two.pdb
+E:\My_workspace\CS\WebJs_two\obj\Debug\WebJs_two.csprojResolveAssemblyReference.cache

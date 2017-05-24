@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+//匿名函数的使用
+    //在js中声明匿名函数
+    //1.把一个匿名函数赋值给了一个变量f1,此时f1是变量名，不是函数名
+    var f1 = function () {
+        alert('这就是一个匿名函数！！！');
+    };
+
+    f1();
+    f1 = 100;
+    alert(f1);
+
+    f1 = function (x, y) { return x + y; };
+    var r = f1(10, 23);
+    alert(r);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

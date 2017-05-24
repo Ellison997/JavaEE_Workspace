@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('but_baidu').onclick = function () {
+                location.href = 'http://www.baidu.com';
+            };
+            document.getElementById('but_s').onclick = function () {
+                if (confirm('你确定要删除吗？')) {
+                    alert('删除');
+                } else {
+                    alert('取消删除！');
+                }
+
+            };
+
+            var txtobj = document.getElementById('text');
+            var intervalID;
+            //启动
+            document.getElementById('bt_start').onclick = function () {
+                //声明一个定时器
+                intervalID = setInterval(function () {
+                    txtobj.value++;
+
+
+                }, 1000);       //每隔一秒执行一次这里的代码
+
+            };
+            //停止
+            document.getElementById('bt_stop').onclick = function () {
+                clearInterval(intervalID);      //通过计时器的ID停止
+            }
+
+
+        };
+
+
+    </script>
+
+</head>
+<body>
+    <input type="button" name="name" value="去百度" id ="but_baidu" />
+    <input type="button" name="name" value="按钮" id="but_s"/>
+    <br />
+    <input type="text" id="text" name="name" value=" " />
+    <input type="button" name="name" value="start" id="bt_start" />
+    <input type="button" name="name" value="stop"  id="bt_stop" />
+</body>
+</html>

@@ -1,0 +1,4 @@
+E:\My_workspace\CS\javaacript_one\bin\javaacript_one.dll
+E:\My_workspace\CS\javaacript_one\bin\javaacript_one.pdb
+E:\My_workspace\CS\javaacript_one\obj\Debug\javaacript_one.dll
+E:\My_workspace\CS\javaacript_one\obj\Debug\javaacript_one.pdb

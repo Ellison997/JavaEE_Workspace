@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    function Person(name,age,email) {
+        this.user_naem = name;
+        this.user_age = age;
+        this.user_email = email;
+
+        this.sayHi = function () {
+            alert('名字是:' + this.user_naem + ',年龄：' + this.user_age);
+
+        }
+    }
+    var p = new Person();
+    p.user_name = 'zfq';
+    p.user_age = 18;
+    p.user_email = '1215722711@qq.com';
+
+    p.sayHi = function () {
+        alert('名字是:'+p.user_name+',年龄：'+p.user_age);
+
+    }
+    //p.sayHi();
+
+    var p1 = new Person('张三', 23, 'fhsd.qq.com');
+
+    p1.sayHi();
+
+    var a = ('123', 100);
+    alert(a+'     '+typeof (a));           //100  number类型
+    var as = new Object('123', 100);
+    alert(as + '     ' + typeof (as));      //123  Object
+
+    //通过对象instanceof 类型（构造函数名称），就可以判断一个对象是否是某个类型
+    alert(p instanceof Person);
+
+    //------------------通过对象对象字面量来直接创建对象-----------
+    var p2 = {
+        user_name: '田硕硕',
+        user_age: 10,
+        user_email: 'tianshuo1215@qq.com',
+        say_hi: function () {
+            alert('我的名字是：' + this.user_name + '  年龄：' + this.user_age + '   邮箱：' + this.user_email);
+
+
+        },
+        say_hello: function () {
+            alert('大家好，我今年'+this.user_age+'岁了');
+        }
+        };
+       p2.say_hi();
+       p2.say_hello();
+
+
+
+    
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

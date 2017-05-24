@@ -1,0 +1,5 @@
+E:\My_workspace\CS\WebJs_three\bin\WebJs_three.dll
+E:\My_workspace\CS\WebJs_three\bin\WebJs_three.pdb
+E:\My_workspace\CS\WebJs_three\obj\Debug\WebJs_three.dll
+E:\My_workspace\CS\WebJs_three\obj\Debug\WebJs_three.pdb
+E:\My_workspace\CS\WebJs_three\obj\Debug\WebJs_three.csprojResolveAssemblyReference.cache

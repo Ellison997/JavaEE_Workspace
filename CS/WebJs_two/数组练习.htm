@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script type="text/javascript">
+    var arr = ['乔丹', '科比', '姚明'];
+    //var result = fnJoin(arr, '&|');
+    //alert(result);
+    arr.join('|&&');
+    alert(arr);
+
+    function fnJoin(arr, separator) {
+        var str = '', i;
+        for (i = 0; i < arr.length - 1; i++) {
+            //使用指定的分隔符分隔数组
+            str = str + arr[i] + separator;
+
+        }
+        str = str + arr[arr.length - 1];
+        //返回
+        return str;
+
+    }
+
+    //-----------------------------------------
+    var arrData = ['3', 'A', '8', 'haha', '和和']
+   arrData.reverse();      //反转数组
+    alert(arrData);
+
+
+    //------------------数组的sort方法-------------------------------------
+    var arrName = ['KObe', 'james', 'Jordan', 'Yao', 'Iverson', 'Zhaoxiaohu'];
+    arrName.sort();     //按字母顺序排序，没有降序功能
+    arrName.reverse();      //排序后反转一下
+    alert(arrName);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

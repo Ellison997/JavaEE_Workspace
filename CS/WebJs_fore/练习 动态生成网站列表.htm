@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var dict = {
+        '百度':'http;//www.baidu.com',
+        '心凉':'http://www.sina.com.cn',
+        '谷歌':'http://www.good.com'
+        };
+
+        window.onload = function () {
+            document.getElementById('btn').onclick = function () {
+                var createTable = document.createElement('table');
+                createTable.border = "1";       //设置表格边框
+                for (var key in dict) {
+                    //创建行对象
+                    var creatTr = document.createElement('tr');
+                    //创建列
+                    var td1 = document.createElement('td');
+                    td1.innerHTML = key;
+                    var td2 = document.createElement('td');
+                    td2.innerHTML = '<a href="' + dict[key] + '">' + key + '</a>';
+
+                    //把列加到行中
+                    creatTr.appendChild(td1);
+                    creatTr.appendChild(td2);
+                    createTable.appendChild(creatTr);
+                    document.body.appendChild(createTable);
+                };
+
+
+
+
+            };
+
+
+        };
+    
+    </script>
+
+
+</head>
+<body>
+    <input type="button" name="name" value="添加" id="btn" />
+</body>
+</html>
