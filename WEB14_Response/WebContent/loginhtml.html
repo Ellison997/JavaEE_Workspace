@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>用户登录</title>
+<script type="text/javascript">
+function changeImg(ooo){
+	ooo.src="/WEB14_Response/checkimg?time="+new Date().getTime();
+};
+</script>
+</head>
+<body>
+<h1>用户登录</h1>
+<p>用户名：<input type="text" name="username"></p>
+<p>密码：<input type="password" name="userpwd"></p>
+<p>验证码：<input type="text" name="check"><img onclick="changeImg(this)" alt="" src="/WEB14_Response/checkimg"></p>
+</body>
+</html>
